@@ -185,6 +185,19 @@ h1.name{
 }
 .chip::before{ content:"•"; color:var(--signal); }
 
+.journey-teaser{
+  display:flex; justify-content:center; padding:0 20px 60px;
+}
+.journey-teaser a{
+  display:inline-flex; align-items:center; gap:10px;
+  padding:14px 24px; border-radius:14px;
+  background:linear-gradient(180deg, var(--panel), var(--panel-2));
+  border:1px solid var(--line); text-decoration:none; color:var(--paper);
+  font-size:14.5px; transition:.18s ease;
+}
+.journey-teaser a:hover{ border-color:var(--signal); transform:translateY(-2px); }
+.journey-teaser .rank{ font-family:'JetBrains Mono',monospace; color:var(--signal); font-weight:600; }
+
 /* ---------- WHAT I DO ---------- */
 .what-i-do{ padding:10px 20px 80px; }
 .section-heading{ text-align:center; margin-bottom:34px; }
@@ -220,6 +233,7 @@ footer{
 <nav>
   <a href="index.html" aria-current="page">Home</a>
   <a href="projects.html">Projects</a>
+  <a href="journey.html">Journey</a>
   <a href="about.html">About</a>
   <a href="contact.html">Contact</a>
 </nav>
@@ -291,6 +305,10 @@ footer{
   <span class="chip">Deep Learning</span>
   <span class="chip">EDA</span>
   <span class="chip">Matplotlib</span>
+</div>
+
+<div class="journey-teaser">
+  <a href="journey.html">📖 Read the 8-week journey — <span class="rank">rank 81 of 6,600 →</span></a>
 </div>
 
 <section class="what-i-do">
