@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Muhammad Umar</title>
+<meta name="description" content="Contact Muhammad Umar for internships, collaborations, and opportunities.">
+<meta property="og:title" content="Contact | Muhammad Umar">
+<meta property="og:description" content="Contact Muhammad Umar for internships, collaborations, and opportunities.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://umarali8.github.io/portfolio/og-image.png">
+<meta property="og:url" content="https://umarali8.github.io/portfolio/contact.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://umarali8.github.io/portfolio/og-image.png">
+<link rel="canonical" href="https://umarali8.github.io/portfolio/contact.html">
+
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --void:#070B14; --panel:#0F1729; --panel-2:#121C33;
+  --line: rgba(148,163,184,0.16);
+  --signal:#2DD4BF; --signal-dim: rgba(45,212,191,0.14);
+  --paper:#E7ECF5; --slate:#97A3BC; --radius:16px;
+}
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  background:radial-gradient(ellipse 800px 500px at 50% -10%, rgba(45,212,191,0.09), transparent 60%), var(--void);
+  color:var(--paper); font-family:'Inter',-apple-system,sans-serif; -webkit-font-smoothing:antialiased;
+}
+h1,h2{font-family:'Space Grotesk',sans-serif; margin:0;}
+a{color:var(--signal);}
+a:focus-visible{outline:2px solid var(--signal); outline-offset:3px;}
+
+nav{
+  position:sticky; top:0; z-index:20; display:flex; align-items:center; justify-content:center; gap:6px;
+  padding:18px 20px; background:rgba(7,11,20,0.72); backdrop-filter: blur(10px); border-bottom:1px solid var(--line);
+}
+nav a{ text-decoration:none; color:var(--slate); font-weight:500; font-size:14.5px; padding:8px 16px; border-radius:20px; transition:.15s ease; }
+nav a:hover{ color:var(--paper); background:rgba(148,163,184,0.08); }
+nav a[aria-current="page"]{ color:var(--void); background:var(--signal); font-weight:600; }
+
+.wrap{ max-width:600px; margin:0 auto; padding:64px 24px 90px; text-align:center; }
+.eyebrow{
+  font-family:'JetBrains Mono',monospace; color:var(--signal); font-size:13px;
+  letter-spacing:.14em; text-transform:uppercase; margin-bottom:16px;
+  display:flex; align-items:center; justify-content:center; gap:10px;
+}
+.eyebrow::before{ content:""; width:7px; height:7px; border-radius:50%; background:var(--signal); box-shadow:0 0 12px var(--signal); }
+h1{ font-size:clamp(32px,6vw,46px); margin-bottom:16px; }
+.wrap > p{ color:var(--slate); line-height:1.7; margin-bottom:38px; }
+
+.card{
+  background:linear-gradient(180deg, var(--panel), var(--panel-2));
+  border:1px solid var(--line); border-radius:var(--radius);
+  padding:14px;
+}
+
+.contact-link{
+  display:flex; align-items:center; gap:14px; text-align:left;
+  margin:8px; padding:16px 18px;
+  background:rgba(255,255,255,0.02);
+  border:1px solid var(--line);
+  color:var(--paper); text-decoration:none; border-radius:12px;
+  transition:.15s ease;
+}
+.contact-link:hover{ border-color:var(--signal); background:var(--signal-dim); transform:translateY(-1px); }
+.contact-link .ic{
+  width:38px; height:38px; border-radius:10px; background:rgba(45,212,191,0.12);
+  display:flex; align-items:center; justify-content:center; color:var(--signal); flex-shrink:0;
+}
+.contact-link .label{ font-weight:600; font-size:15px; }
+.contact-link .meta{ display:block; font-family:'JetBrains Mono',monospace; font-weight:400; font-size:12.5px; color:var(--slate); margin-top:2px; }
+
+footer{ text-align:center; padding:26px; color:var(--slate); font-size:13.5px; border-top:1px solid var(--line); font-family:'JetBrains Mono',monospace; }
+</style>
+</head>
+
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="projects.html">Projects</a>
+  <a href="about.html">About</a>
+  <a href="contact.html" aria-current="page">Contact</a>
+</nav>
+
+<div class="wrap">
+  <div class="eyebrow">Let's Connect</div>
+  <h1>Contact Me</h1>
+  <p>If you'd like to connect, discuss Data Science / ML work, or share an opportunity, reach out through any of these.</p>
+  <p style="margin-top:-24px; margin-bottom:38px; font-size:13.5px; font-family:'JetBrains Mono',monospace; color:var(--slate);">📍 Karachi, Pakistan &nbsp;·&nbsp; Expected response: within 24–48 hours</p>
+
+  <div class="card">
+    <a class="contact-link" href="mailto:muhammadumarjamali0@gmail.com">
+      <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="m4 4 8 8 8-8"/></svg></span>
+      <span><span class="label">Email</span><span class="meta">muhammadumarjamali0@gmail.com</span></span>
+    </a>
+
+    <a class="contact-link" href="https://github.com/umarali8" target="_blank" rel="noopener">
+      <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.93-2.35 4.79-4.58 5.05.36.32.68.94.68 1.9 0 1.37-.01 2.48-.01 2.82 0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg></span>
+      <span><span class="label">GitHub</span><span class="meta">github.com/umarali8</span></span>
+    </a>
+
+    <a class="contact-link" href="https://www.linkedin.com/in/muhammad-umar-490605223" target="_blank" rel="noopener">
+      <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg></span>
+      <span><span class="label">LinkedIn</span><span class="meta">linkedin.com/in/muhammad-umar-490605223</span></span>
+    </a>
+  </div>
+</div>
+
+<footer>© 2026 Muhammad Umar — built with data, not just claims</footer>
+
+</body>
+</html>

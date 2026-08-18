@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page Not Found | Muhammad Umar</title>
+<meta name="robots" content="noindex">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<style>
+:root{
+  --void:#070B14; --panel:#0F1729; --panel-2:#121C33;
+  --line: rgba(148,163,184,0.16);
+  --signal:#2DD4BF; --signal-dim: rgba(45,212,191,0.14);
+  --paper:#E7ECF5; --slate:#97A3BC; --radius:16px;
+}
+*{box-sizing:border-box;}
+body{
+  margin:0; min-height:100vh; display:flex; flex-direction:column;
+  background:radial-gradient(ellipse 800px 500px at 50% -10%, rgba(45,212,191,0.09), transparent 60%), var(--void);
+  color:var(--paper); font-family:'Inter',-apple-system,sans-serif; -webkit-font-smoothing:antialiased;
+}
+h1{font-family:'Space Grotesk',sans-serif; margin:0;}
+a{color:var(--signal);}
+a:focus-visible{outline:2px solid var(--signal); outline-offset:3px;}
+
+nav{
+  position:sticky; top:0; z-index:20; display:flex; align-items:center; justify-content:center; gap:6px;
+  padding:18px 20px; background:rgba(7,11,20,0.72); backdrop-filter: blur(10px); border-bottom:1px solid var(--line);
+}
+nav a{ text-decoration:none; color:var(--slate); font-weight:500; font-size:14.5px; padding:8px 16px; border-radius:20px; transition:.15s ease; }
+nav a:hover{ color:var(--paper); background:rgba(148,163,184,0.08); }
+
+.wrap{ flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:64px 24px; }
+.code{
+  font-family:'JetBrains Mono',monospace; color:var(--signal); font-size:15px;
+  letter-spacing:.14em; text-transform:uppercase; margin-bottom:18px;
+  display:flex; align-items:center; gap:10px;
+}
+.code::before{ content:""; width:7px; height:7px; border-radius:50%; background:var(--signal); box-shadow:0 0 12px var(--signal); }
+h1{ font-size:clamp(60px,12vw,120px); line-height:1; background:linear-gradient(120deg, #ffffff 20%, var(--signal) 75%); -webkit-background-clip:text; background-clip:text; color:transparent; }
+p{ color:var(--slate); max-width:440px; line-height:1.7; margin:18px 0 34px; }
+
+.btn{
+  display:inline-flex; align-items:center; gap:8px;
+  padding:13px 26px; border-radius:30px;
+  font-weight:600; font-size:15px; text-decoration:none;
+  background:var(--signal); color:#04211D; transition:.18s ease;
+}
+.btn:hover{ box-shadow:0 6px 24px rgba(45,212,191,0.35); transform:translateY(-2px); }
+
+footer{ text-align:center; padding:26px; color:var(--slate); font-size:13.5px; border-top:1px solid var(--line); font-family:'JetBrains Mono',monospace; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="projects.html">Projects</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<div class="wrap">
+  <div class="code">404 · Page Not Found</div>
+  <h1>404</h1>
+  <p>This page doesn't exist — or it moved. Let's get you back to something real.</p>
+  <a class="btn" href="index.html">← Back to Home</a>
+</div>
+
+<footer>© 2026 Muhammad Umar — built with data, not just claims</footer>
+
+</body>
+</html>

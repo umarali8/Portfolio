@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About | Muhammad Umar</title>
+<meta name="description" content="Learn about Muhammad Umar, a Computer Science student focused on Data Science and AI.">
+<meta property="og:title" content="About | Muhammad Umar">
+<meta property="og:description" content="Learn about Muhammad Umar, a Computer Science student focused on Data Science and AI.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://umarali8.github.io/portfolio/og-image.png">
+<meta property="og:url" content="https://umarali8.github.io/portfolio/about.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://umarali8.github.io/portfolio/og-image.png">
+<link rel="canonical" href="https://umarali8.github.io/portfolio/about.html">
+
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --void:#070B14; --panel:#0F1729; --panel-2:#121C33;
+  --line: rgba(148,163,184,0.16);
+  --signal:#2DD4BF; --signal-dim: rgba(45,212,191,0.14);
+  --alert:#FBBF24;
+  --paper:#E7ECF5; --slate:#97A3BC; --radius:16px;
+}
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  background:radial-gradient(ellipse 900px 500px at 85% -10%, rgba(45,212,191,0.08), transparent 60%), var(--void);
+  color:var(--paper); font-family:'Inter',-apple-system,sans-serif; -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3{font-family:'Space Grotesk',sans-serif; margin:0;}
+a{color:var(--signal);}
+a:focus-visible{outline:2px solid var(--signal); outline-offset:3px;}
+
+nav{
+  position:sticky; top:0; z-index:20; display:flex; align-items:center; justify-content:center; gap:6px;
+  padding:18px 20px; background:rgba(7,11,20,0.72); backdrop-filter: blur(10px); border-bottom:1px solid var(--line);
+}
+nav a{ text-decoration:none; color:var(--slate); font-weight:500; font-size:14.5px; padding:8px 16px; border-radius:20px; transition:.15s ease; }
+nav a:hover{ color:var(--paper); background:rgba(148,163,184,0.08); }
+nav a[aria-current="page"]{ color:var(--void); background:var(--signal); font-weight:600; }
+
+.wrap{ max-width:760px; margin:0 auto; padding:0 24px; }
+.page-head{ text-align:center; padding:64px 20px 10px; }
+.eyebrow{
+  font-family:'JetBrains Mono',monospace; color:var(--signal); font-size:13px;
+  letter-spacing:.14em; text-transform:uppercase; margin-bottom:16px;
+  display:flex; align-items:center; justify-content:center; gap:10px;
+}
+.eyebrow::before{ content:""; width:7px; height:7px; border-radius:50%; background:var(--signal); box-shadow:0 0 12px var(--signal); }
+.page-head h1{ font-size:clamp(32px,6vw,46px); }
+
+.card{
+  background:linear-gradient(180deg, var(--panel), var(--panel-2));
+  border:1px solid var(--line); border-radius:var(--radius);
+  padding:38px 40px; margin:44px 0 90px;
+}
+.card h2{ font-size:20px; color:var(--signal); margin-bottom:14px; }
+.card p{ color:#C7D0E0; line-height:1.8; margin:0 0 16px; }
+.divider{ border:none; border-top:1px solid var(--line); margin:30px 0; }
+
+.skill-grid{ display:flex; flex-wrap:wrap; gap:10px; }
+.chip{
+  font-family:'JetBrains Mono',monospace; font-size:12.5px; color:var(--slate);
+  border:1px solid var(--line); background:rgba(255,255,255,0.02);
+  padding:8px 14px; border-radius:8px; display:flex; align-items:center; gap:7px;
+}
+.chip::before{ content:"•"; color:var(--signal); }
+
+.cert-grid{ display:grid; gap:10px; }
+.cert-item{
+  display:flex; align-items:center; gap:12px;
+  padding:12px 16px; border:1px solid var(--line); border-radius:10px;
+  background:rgba(255,255,255,0.02); color:#C7D0E0; font-size:14.5px;
+}
+.cert-item svg{ flex-shrink:0; color:var(--signal); }
+
+.snapshot-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:10px; }
+@media (max-width:520px){ .snapshot-grid{ grid-template-columns:1fr; } }
+.snapshot-item{
+  padding:14px 16px; border:1px solid var(--line); border-radius:10px;
+  background:rgba(255,255,255,0.02);
+}
+.snapshot-item .label{
+  font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--signal);
+  text-transform:uppercase; letter-spacing:.08em; margin-bottom:4px;
+}
+.snapshot-item .value{ color:var(--paper); font-size:14.5px; }
+
+/* ---------- timeline ---------- */
+.timeline{ position:relative; padding-left:28px; }
+.timeline::before{ content:""; position:absolute; left:6px; top:6px; bottom:6px; width:2px; background:var(--line); }
+.tl-item{ position:relative; padding-bottom:26px; }
+.tl-item:last-child{ padding-bottom:0; }
+.tl-item::before{
+  content:""; position:absolute; left:-28px; top:4px; width:14px; height:14px;
+  border-radius:50%; background:var(--void); border:2px solid var(--signal);
+}
+.tl-item .date{ font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--signal); margin-bottom:4px; }
+.tl-item .school{ font-weight:600; color:var(--paper); font-size:15.5px; }
+.tl-item .deg{ color:var(--slate); font-size:14px; margin-top:2px; }
+
+footer{ text-align:center; padding:26px; color:var(--slate); font-size:13.5px; border-top:1px solid var(--line); font-family:'JetBrains Mono',monospace; }
+</style>
+</head>
+
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="projects.html">Projects</a>
+  <a href="about.html" aria-current="page">About</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<div class="page-head">
+  <div class="eyebrow">The Person Behind the Models</div>
+  <h1>About Me</h1>
+</div>
+
+<div class="wrap">
+<div class="card">
+
+  <h2>Hi, I'm Umar 👋</h2>
+  <p>I'm a BS Computer Science student with a growing focus on Data Science, Machine Learning, and AI Engineering. I like taking a problem, understanding the data behind it, and turning it into a practical solution — using Python, machine learning, and AI, with a habit of being clear about what's proven versus what's still pending.</p>
+  <p>My approach is to learn by doing. Through my coursework, the FlyRank AI/ML internship, and personal projects, I'm building my experience in data analysis, preprocessing, feature selection, model building, and evaluation — and increasingly, in how to communicate that work honestly to people outside the project.</p>
+
+  <hr class="divider">
+
+  <h2>Professional Snapshot</h2>
+  <div class="snapshot-grid">
+    <div class="snapshot-item">
+      <div class="label">Location</div>
+      <div class="value">Karachi, Pakistan</div>
+    </div>
+    <div class="snapshot-item">
+      <div class="label">Languages</div>
+      <div class="value">English, Urdu</div>
+    </div>
+    <div class="snapshot-item">
+      <div class="label">Availability</div>
+      <div class="value">Open to internships and entry-level roles</div>
+    </div>
+    <div class="snapshot-item">
+      <div class="label">Internship Status</div>
+      <div class="value">FlyRank AI/ML Internship — completed</div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <h2>Areas I'm Exploring</h2>
+  <div class="skill-grid">
+    <span class="chip">Machine Learning</span>
+    <span class="chip">Exploratory Data Analysis</span>
+    <span class="chip">Python / Scikit-learn</span>
+    <span class="chip">Pandas &amp; Matplotlib</span>
+    <span class="chip">SQL</span>
+    <span class="chip">Power BI</span>
+    <span class="chip">Deep Learning</span>
+    <span class="chip">Generative AI</span>
+  </div>
+
+  <hr class="divider">
+
+  <h2>Certifications</h2>
+  <div class="cert-grid">
+    <div class="cert-item">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l7 4v6c0 5-3.5 8-7 10-3.5-2-7-5-7-10V6l7-4Z"/><path d="m9 12 2 2 4-4"/></svg>
+      Introduction to Software Engineering
+    </div>
+    <div class="cert-item">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l7 4v6c0 5-3.5 8-7 10-3.5-2-7-5-7-10V6l7-4Z"/><path d="m9 12 2 2 4-4"/></svg>
+      Creating Compelling Reports
+    </div>
+    <div class="cert-item">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l7 4v6c0 5-3.5 8-7 10-3.5-2-7-5-7-10V6l7-4Z"/><path d="m9 12 2 2 4-4"/></svg>
+      Getting Started with Git and GitHub
+    </div>
+    <div class="cert-item">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l7 4v6c0 5-3.5 8-7 10-3.5-2-7-5-7-10V6l7-4Z"/><path d="m9 12 2 2 4-4"/></svg>
+      MongoDB Overview: Core Concepts and Architecture
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <h2>Education</h2>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="date">OCT 2024 — OCT 2028</div>
+      <div class="school">Sir Syed University of Engineering &amp; Technology (SSUET)</div>
+      <div class="deg">BS Computer Science</div>
+    </div>
+    <div class="tl-item">
+      <div class="date">EARLIER</div>
+      <div class="school">Government Boys Higher Secondary School, Mehar Ali Jamali</div>
+      <div class="deg">Intermediate</div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <h2>What I'm Working Toward</h2>
+  <p style="margin-bottom:0;">My goal is to build practical Data Science and AI projects that solve real problems, that I can clearly explain and defend, and that other people can actually check — not just take my word for.</p>
+
+</div>
+</div>
+
+<footer>© 2026 Muhammad Umar — built with data, not just claims</footer>
+
+</body>
+</html>

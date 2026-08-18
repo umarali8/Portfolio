@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects | Muhammad Umar</title>
+<meta name="description" content="Machine Learning, Data Science, and AI case studies by Muhammad Umar.">
+<meta property="og:title" content="Projects | Muhammad Umar">
+<meta property="og:description" content="Machine Learning, Data Science, and AI case studies by Muhammad Umar.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://umarali8.github.io/portfolio/og-image.png">
+<meta property="og:url" content="https://umarali8.github.io/portfolio/projects.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://umarali8.github.io/portfolio/og-image.png">
+<link rel="canonical" href="https://umarali8.github.io/portfolio/projects.html">
+
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --void:#070B14;
+  --panel:#0F1729;
+  --panel-2:#121C33;
+  --line: rgba(148,163,184,0.16);
+  --signal:#2DD4BF;
+  --signal-dim: rgba(45,212,191,0.14);
+  --alert:#FBBF24;
+  --alert-dim: rgba(251,191,36,0.12);
+  --paper:#E7ECF5;
+  --slate:#97A3BC;
+  --radius:16px;
+}
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  background:
+    radial-gradient(ellipse 900px 500px at 15% -10%, rgba(45,212,191,0.08), transparent 60%),
+    var(--void);
+  color:var(--paper);
+  font-family:'Inter',-apple-system,sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3{font-family:'Space Grotesk',sans-serif; margin:0;}
+.mono{font-family:'JetBrains Mono',monospace;}
+a{color:var(--signal);}
+a:focus-visible, button:focus-visible{outline:2px solid var(--signal); outline-offset:3px;}
+
+nav{
+  position:sticky; top:0; z-index:20;
+  display:flex; align-items:center; justify-content:center; gap:6px;
+  padding:18px 20px;
+  background:rgba(7,11,20,0.72);
+  backdrop-filter: blur(10px);
+  border-bottom:1px solid var(--line);
+}
+nav a{
+  text-decoration:none; color:var(--slate); font-weight:500; font-size:14.5px;
+  padding:8px 16px; border-radius:20px; transition:.15s ease;
+}
+nav a:hover{ color:var(--paper); background:rgba(148,163,184,0.08); }
+nav a[aria-current="page"]{ color:var(--void); background:var(--signal); font-weight:600; }
+
+.wrap{ max-width:880px; margin:0 auto; padding:0 24px; }
+
+.page-head{ text-align:center; padding:64px 20px 10px; }
+.eyebrow{
+  font-family:'JetBrains Mono',monospace; color:var(--signal); font-size:13px;
+  letter-spacing:.14em; text-transform:uppercase; margin-bottom:16px;
+  display:flex; align-items:center; justify-content:center; gap:10px;
+}
+.eyebrow::before{ content:""; width:7px; height:7px; border-radius:50%; background:var(--signal); box-shadow:0 0 12px var(--signal); }
+.page-head h1{ font-size:clamp(32px,6vw,46px); margin-bottom:14px; }
+.page-head p{ color:var(--slate); max-width:560px; margin:0 auto; line-height:1.7; }
+
+.projects{ padding:50px 20px 90px; display:flex; flex-direction:column; gap:28px; }
+
+.card{
+  background:linear-gradient(180deg, var(--panel), var(--panel-2));
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:34px 36px;
+  position:relative;
+  overflow:hidden;
+}
+.card::before{
+  content:""; position:absolute; top:0; left:0; right:0; height:2px;
+  background:linear-gradient(90deg, transparent, var(--signal), transparent);
+  opacity:.6;
+}
+
+.card-head{ display:flex; align-items:flex-start; justify-content:space-between; gap:14px; flex-wrap:wrap; margin-bottom:4px; }
+.card h2{ font-size:24px; }
+.status{
+  font-family:'JetBrains Mono',monospace; font-size:11px; font-weight:600;
+  letter-spacing:.06em; text-transform:uppercase;
+  padding:5px 12px; border-radius:20px; white-space:nowrap;
+  background:var(--signal-dim); color:var(--signal); border:1px solid rgba(45,212,191,0.35);
+}
+.subtitle{ color:var(--slate); font-size:14px; margin:6px 0 22px; font-style:italic; }
+
+.section-label{
+  font-family:'JetBrains Mono',monospace; font-size:11.5px; color:var(--signal);
+  text-transform:uppercase; letter-spacing:.08em; margin:20px 0 6px;
+}
+.card p{ color:#C7D0E0; line-height:1.75; margin:0 0 4px; font-size:15px; }
+.card p strong{ color:var(--paper); }
+
+.callout{
+  background:var(--alert-dim); border-left:3px solid var(--alert);
+  border-radius:8px; padding:12px 16px; margin-top:14px;
+  font-size:14px; color:#E9D9A8; line-height:1.6;
+}
+
+/* ---------- viz containers ---------- */
+.viz{ margin:22px 0; padding:20px; background:rgba(255,255,255,0.02); border:1px solid var(--line); border-radius:12px; }
+.viz-title{ font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--slate); text-transform:uppercase; letter-spacing:.06em; margin-bottom:14px; }
+.viz svg text{ font-family:'JetBrains Mono',monospace; }
+
+.tags{ display:flex; flex-wrap:wrap; gap:8px; margin-top:20px; }
+.tag{
+  font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--slate);
+  border:1px solid var(--line); padding:5px 12px; border-radius:7px;
+}
+
+.links{ margin-top:22px; display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+.links a{
+  font-family:'Inter',sans-serif; font-weight:600; font-size:14px;
+  text-decoration:none; padding:10px 18px; border-radius:8px;
+  background:var(--signal); color:#04211D; transition:.15s ease;
+}
+.links a:hover{ box-shadow:0 4px 18px rgba(45,212,191,0.3); transform:translateY(-1px); }
+.links a.secondary{ background:transparent; border:1px solid var(--line); color:var(--paper); }
+.links a.secondary:hover{ border-color:var(--signal); color:var(--signal); }
+.links .muted-note{ color:var(--slate); font-size:13px; font-style:italic; font-family:'Inter',sans-serif; }
+
+footer{
+  text-align:center; padding:26px; color:var(--slate); font-size:13.5px;
+  border-top:1px solid var(--line); font-family:'JetBrains Mono',monospace;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="projects.html" aria-current="page">Projects</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<div class="page-head">
+  <div class="eyebrow">Case Studies</div>
+  <h1>My Projects</h1>
+  <p>What I explored, what I built, and what I learned — with the evidence shown, not just the claim.</p>
+</div>
+
+<div class="wrap">
+<div class="projects">
+
+  <!-- ============ PROJECT 1: Content Refresh Prioritization ============ -->
+  <div class="card">
+    <div class="card-head">
+      <h2>Content Refresh Prioritization</h2>
+      <span class="status">Shipped</span>
+    </div>
+    <p class="subtitle">FlyRank AI/ML Internship — end-to-end ML capstone</p>
+
+    <div class="section-label">Problem</div>
+    <p>SEO and content teams need a data-driven way to decide which of thousands of webpages to prioritize for a content refresh, instead of relying on gut feel or manual review.</p>
+
+    <div class="section-label">What I Built</div>
+    <p>I designed and built the full pipeline solo: data cleaning, feature engineering, leakage detection, model training, and evaluation. I started with a rule-based baseline, then developed an interpretable Decision Tree classifier, benchmarked against that baseline for a fair comparison.</p>
+
+    <div class="section-label">Approach</div>
+    <p>Analyzed 15 search-performance and content features — including content age, impressions, average position, CTR, and word count — across 30,000 anonymized webpage records from 32 clients, using client-holdout validation to keep results honest across clients.</p>
+
+    <!-- Visualization: baseline vs model accuracy -->
+    <div class="viz">
+      <div class="viz-title">Accuracy — Baseline vs. Model (Test Set)</div>
+      <svg viewBox="0 0 560 108" width="100%" role="img" aria-label="Bar chart: rule-based baseline 87.93 percent accuracy versus Decision Tree model 87.17 percent accuracy">
+        <text x="0" y="18" fill="#C7D0E0" font-size="12">Rule-based baseline</text>
+        <rect x="0" y="26" width="527" height="14" rx="4" fill="rgba(148,163,184,0.15)"></rect>
+        <rect x="0" y="26" width="463" height="14" rx="4" fill="#97A3BC"></rect>
+        <text x="472" y="37" fill="#E7ECF5" font-size="12" font-weight="600">87.93%</text>
+
+        <text x="0" y="70" fill="#C7D0E0" font-size="12">Decision Tree model</text>
+        <rect x="0" y="78" width="527" height="14" rx="4" fill="rgba(45,212,191,0.12)"></rect>
+        <rect x="0" y="78" width="460" height="14" rx="4" fill="#2DD4BF"></rect>
+        <text x="469" y="89" fill="#E7ECF5" font-size="12" font-weight="600">87.17%</text>
+      </svg>
+    </div>
+
+    <div class="section-label">Outcome</div>
+    <p>The Decision Tree reached 87.17% accuracy on held-out clients — and the same framework showed the simple baseline was actually competitive at 87.93%, a more honest and useful finding than shipping unnecessary complexity. <strong>impressions_90d</strong> emerged as the dominant predictive signal.</p>
+
+    <!-- Visualization: feature importance -->
+    <div class="viz">
+      <div class="viz-title">Top Predictive Signal — Feature Importance</div>
+      <svg viewBox="0 0 560 90" width="100%" role="img" aria-label="Feature importance chart: impressions_90d accounts for approximately 82 percent, all other features combined account for approximately 18 percent">
+        <text x="0" y="18" fill="#C7D0E0" font-size="12">impressions_90d</text>
+        <rect x="0" y="26" width="527" height="14" rx="4" fill="rgba(251,191,36,0.12)"></rect>
+        <rect x="0" y="26" width="432" height="14" rx="4" fill="#FBBF24"></rect>
+        <text x="441" y="37" fill="#E7ECF5" font-size="12" font-weight="600">~82%</text>
+
+        <text x="0" y="70" fill="#C7D0E0" font-size="12">All other 14 features (combined)</text>
+        <rect x="0" y="78" width="527" height="10" rx="4" fill="rgba(148,163,184,0.15)"></rect>
+        <rect x="0" y="78" width="95" height="10" rx="4" fill="#5B6B85"></rect>
+      </svg>
+    </div>
+
+    <div class="tags">
+      <span class="tag">Machine Learning</span><span class="tag">Python</span>
+      <span class="tag">Scikit-learn</span><span class="tag">EDA</span>
+      <span class="tag">Decision Tree</span><span class="tag">SEO</span>
+    </div>
+
+    <div class="links">
+      <a href="https://github.com/umarali8" target="_blank" rel="noopener">GitHub Repository</a>
+      <a class="secondary" href="https://umarali8.github.io/" target="_blank" rel="noopener">Live Project →</a>
+    </div>
+  </div>
+
+
+  <!-- ============ PROJECT 2: Taking the Model Public ============ -->
+  <div class="card">
+    <div class="card-head">
+      <h2>Taking the Model Public</h2>
+      <span class="status">Shipped</span>
+    </div>
+    <p class="subtitle">Case Study 2 — publishing the page-priority model as an inspectable research paper</p>
+
+    <div class="section-label">Problem</div>
+    <p>The page-priority model was built and tested, but it was sitting in notebooks — nobody outside the project could see it, check the work, or judge whether the reasoning held up. A model nobody can inspect isn't finished, it's just private.</p>
+
+    <div class="section-label">What I Built</div>
+    <p>I turned the internship dataset and model work into a public research paper — the question, the data, the baseline, the decision tree, the leakage check, and what's still pending — deployed live, with the DNS setup documented in advance, then sent out for a real design review.</p>
+
+    <!-- Visualization: pipeline steps -->
+    <div class="viz">
+      <div class="viz-title">From Notebook to Public Paper</div>
+      <svg viewBox="0 0 560 90" width="100%" role="img" aria-label="Pipeline diagram: Notebook, then Public Paper, then Live Deploy, then Design Review">
+        <line x1="45" y1="30" x2="515" y2="30" stroke="rgba(45,212,191,0.35)" stroke-width="1.5"></line>
+        <g>
+          <circle cx="45" cy="30" r="7" fill="#97A3BC"></circle>
+          <text x="45" y="58" fill="#C7D0E0" font-size="11.5" text-anchor="middle">Notebook</text>
+        </g>
+        <g>
+          <circle cx="200" cy="30" r="7" fill="#2DD4BF"></circle>
+          <text x="200" y="58" fill="#C7D0E0" font-size="11.5" text-anchor="middle">Public Paper</text>
+        </g>
+        <g>
+          <circle cx="360" cy="30" r="7" fill="#2DD4BF"></circle>
+          <text x="360" y="58" fill="#C7D0E0" font-size="11.5" text-anchor="middle">Live Deploy</text>
+        </g>
+        <g>
+          <circle cx="515" cy="30" r="7" fill="#FBBF24"></circle>
+          <text x="515" y="58" fill="#C7D0E0" font-size="11.5" text-anchor="middle">Design Review</text>
+        </g>
+      </svg>
+    </div>
+
+    <div class="section-label">Approach</div>
+    <p>No claims dressed up past what the evaluation supports — the paper says plainly that the baseline-vs-model comparison isn't final until client-holdout validation is complete. From the design review, I fixed what actually blocked understanding: a broken link in the reproducibility section, and a mobile nav that disappeared entirely instead of just shrinking.</p>
+
+    <div class="section-label">Outcome</div>
+    <p>The paper is live, the repo is public, and the reasoning is inspectable end to end — problem, data, method, results, limits, and next steps.</p>
+    <!--div class="callout">⚠ What it isn't yet: a validated accuracy claim. Client-holdout evaluation is still the next step — I chose not to write a bigger claim than the page had actually earned.</div> -->
+
+    <div class="tags">
+      <span class="tag">Research Writing</span><span class="tag">Reproducibility</span>
+      <span class="tag">Design Review</span><span class="tag">Deployment</span>
+      <span class="tag">Machine Learning</span>
+    </div>
+
+    <div class="links"><span class="muted-note">Live link and repo coming soon</span></div>
+  </div>
+
+
+  <!-- ============ PROJECT 3: The Refresh Loop ============ -->
+  <div class="card">
+    <div class="card-head">
+      <h2>The Refresh Loop</h2>
+      <span class="status">Shipped</span>
+    </div>
+    <p class="subtitle">AI Fluency capstone — connecting the model, the paper, and the voice into one repeatable system</p>
+
+    <div class="section-label">Problem</div>
+    <p>Three real pieces of work already existed side by side — a model that scores what needs attention, a paper that explains it honestly, and a consistent writing voice — but they didn't talk to each other. Turning finished work into a case study was a manual, one-off conversation every time.</p>
+
+    <div class="section-label">What I Built</div>
+    <p>A closed loop connecting all three pieces: a documented AI workflow with human sign-off points, a quality checklist, a prompt library, and the new piece — a <strong>Case Study Intake Agent</strong>, a small Claude Project that interviews a raw piece of work one question at a time and drafts a case study in the same three-beat shape, flagging any claim bigger than what's actually proven.</p>
+
+    <!-- Visualization: circular loop diagram, literally the project's name -->
+    <div class="viz">
+      <div class="viz-title">The Loop, Closed</div>
+      <svg viewBox="0 0 300 220" width="100%" style="max-width:320px; margin:0 auto; display:block;" role="img" aria-label="Circular diagram showing four connected stages: Model, Paper, Voice, and Agent, forming a closed loop">
+        <circle cx="150" cy="110" r="70" fill="none" stroke="rgba(45,212,191,0.3)" stroke-width="1.5" stroke-dasharray="4 5"></circle>
+
+        <circle cx="150" cy="40" r="8" fill="#2DD4BF"></circle>
+        <text x="150" y="22" fill="#C7D0E0" font-size="12" text-anchor="middle">Model</text>
+
+        <circle cx="220" cy="110" r="8" fill="#2DD4BF"></circle>
+        <text x="248" y="114" fill="#C7D0E0" font-size="12" text-anchor="middle">Paper</text>
+
+        <circle cx="150" cy="180" r="8" fill="#2DD4BF"></circle>
+        <text x="150" y="203" fill="#C7D0E0" font-size="12" text-anchor="middle">Voice</text>
+
+        <circle cx="80" cy="110" r="8" fill="#FBBF24"></circle>
+        <text x="52" y="114" fill="#E9D9A8" font-size="12" text-anchor="middle">Agent</text>
+      </svg>
+    </div>
+
+    <div class="section-label">Approach</div>
+    <p>Scoped the agent to have a defined job, output shape, and a built-in guardrail — not just a chat wrapper — and kept it simple enough to actually finish and reuse next month. Also produced a standalone Capstone Review Packet PDF so a reviewer can read the whole paper without needing live-site or repo access.</p>
+
+    <div class="section-label">Outcome</div>
+    <p>Shipped all three pieces: the workflow doc, a live "How I work" section on this portfolio, and a working Case Study Intake Agent. The loop now closes end to end — next project goes through the agent, the agent drafts the case study, and the workflow doc stays proven by use rather than by claim alone.</p>
+
+    <div class="tags">
+      <span class="tag">AI Fluency</span><span class="tag">AI Agents</span>
+      <span class="tag">Claude</span><span class="tag">Workflow Design</span>
+      <span class="tag">Personal Branding</span>
+    </div>
+
+    <div class="links"><span class="muted-note">Live link and repo coming soon</span></div>
+  </div>
+
+</div>
+</div>
+
+<footer>© 2026 Muhammad Umar — built with data, not just claims</footer>
+
+</body>
+</html>
